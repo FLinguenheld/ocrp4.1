@@ -1,10 +1,11 @@
 import os
-from frame import(
+from .frame import(
         Justification,
         Frame)
 
 class View:
 
+    # Spécifier les types attendus dans la liste ?
     def __init__(self, header: str, body: list):
         self.frame = Frame()
         self.title = header.upper()

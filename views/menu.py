@@ -1,7 +1,5 @@
-
-from view import View
+from .view import View
 # from frame import Justification
-
 
 class Menu(View):
 
@@ -14,7 +12,6 @@ class Menu(View):
     def show(self):
 
         while True:
-
             try:
                 super().show(False)
 
@@ -26,4 +23,3 @@ class Menu(View):
                raise KeyboardInterrupt 
             except:
                 continue
-
