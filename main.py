@@ -4,8 +4,8 @@ from menu import Menu
 # my_view.show()
 
 
-my_menu = Menu(title="Mon momument !!!", choices={"La tour Eiffel":0, "Montparnasse":1, "Mont St Michel": 2})
-val = my_menu.show()
+my_menu = Menu(header="Mon momument !!!", choices={"La tour Eiffel":0, "Montparnasse":1, "Mont St Michel": 2})
 
+val = my_menu.show()
 print(val)
 
