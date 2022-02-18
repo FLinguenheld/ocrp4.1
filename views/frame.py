@@ -29,24 +29,12 @@ class Frame:
 
     def _build_text(self, line: str, justif: Justification):
         match justif:
-                case Justification.LEFT:
-                    return str("│" + " " * self.tab + line + " " * (self.width - len(line) - self.tab) + "│" )
-                case Justification.RIGHT:
-                    return str("│" + " " * (self.width - len(line) - self.tab) + line + " " *  + self.tab + "│" )
-                case _:
-                    return str("│" + line.center(self.width) + "│" )
-
-
-    def print_question(self, text: str):
-
-        self.print_line()
-        self.print_text(text, Justification.LEFT)
-        self.print_bottom()
-
-        # choice = input("\u001B[3A\u001B[50C")
-        return input(f"\u001B[2A\u001B[{len(text) + self.tab + 2}C> ")
-
-
+            case Justification.LEFT:
+                return str("│" + " " * self.tab + line + " " * (self.width - len(line) - self.tab) + "│" )
+            case Justification.RIGHT:
+                return str("│" + " " * (self.width - len(line) - self.tab) + line + " " *  + self.tab + "│" )
+            case _:
+                return str("│" + line.center(self.width) + "│" )
 
 
 
